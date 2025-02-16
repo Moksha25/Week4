@@ -1,0 +1,14 @@
+package Annotation.Exercise.Create_Custom_Annotatio_and_Use_It;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+// Define the custom annotation
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@interface TaskInfo {
+    String priority();
+    String assignedTo();
+}
